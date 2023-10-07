@@ -39,5 +39,7 @@ function hideFirstStep() {
     stepOne.style.opacity = "0";
     stepTwo.classList.remove("hidden");
     stepTwo.classList.add("flex", "z-10");
+  } else {
+    alert("Please select a rating.");
   }
 }
