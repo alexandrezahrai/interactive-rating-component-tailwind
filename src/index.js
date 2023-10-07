@@ -22,11 +22,12 @@ function handleActive(clickedRrating) {
   clearAllRatings();
 
   clickedRrating.classList.add("active", "hover:bg-orange");
-  selected.textContent = clickedRrating.textContent;
+  selected.textContent = `You selected ${clickedRrating.textContent} out of 5`;
 }
 
 function hideFirstStep() {
   let hasActive = false;
+  
   ratings.forEach((rating) => {
     activeRating = rating.classList.contains("active");
     if (activeRating) {
