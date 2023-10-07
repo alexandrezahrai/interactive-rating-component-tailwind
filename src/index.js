@@ -3,6 +3,7 @@ const ratings = document.querySelectorAll(".rating-item");
 const submitBtn = document.getElementById("submit");
 const stepOne = document.getElementById("card-1");
 const stepTwo = document.getElementById("card-2");
+const selected = document.getElementById("total");
 
 // Event Listeners
 ratings.forEach((rating) =>
@@ -21,6 +22,7 @@ function handleActive(clickedRrating) {
   clearAllRatings();
 
   clickedRrating.classList.add("active", "hover:bg-orange");
+  selected.textContent = clickedRrating.textContent;
 }
 
 function hideFirstStep() {
